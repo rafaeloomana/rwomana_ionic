@@ -1,22 +1,20 @@
 <ion-header>
   <ion-toolbar>
-
+    
     <ion-buttons slot="start">
       <ion-back-button
           [text]="buttonText"
           [icon]="buttonIcon">
       </ion-back-button>
     </ion-buttons>
-    
-    <ion-title>Recipe</ion-title>
+
+    <ion-title>Employee Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-  <img src="assets/img/{{name}}.jpg" >
-  
-  <h2 style="padding-left: 1em;">{{name}}</h2>
-
+  <img alt="employee" src="assets/img/{{id}}.jpg" />
+  <h6>Email: {{ email }}</h6>
+  <h6>Phone: {{ phone }}</h6>
+  <h6>Website: {{ website }}</h6>
 </ion-content>
-

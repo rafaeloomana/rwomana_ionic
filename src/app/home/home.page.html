@@ -13,47 +13,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <div>
-
-    <ion-card routerLink="/recipe/1">
-      <img alt="adobo" src="assets/img/adobo.jpg" />
+  <div *ngFor="let employeeData of employeeDatas; let i=index">
+    <ion-card routerLink="/employees/{{i}}">
+      <img alt="employee0" src="assets/img/{{i}}.jpg" />
       <ion-card-header>
-        <ion-card-title>Adobo</ion-card-title>
-        <ion-card-subtitle>Filipino Food</ion-card-subtitle>
+        <ion-card-title>{{ employeeData.username }}</ion-card-title>
+        <ion-card-subtitle>{{ employeeData.name }}</ion-card-subtitle>
       </ion-card-header>
-    
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
-      </ion-card-content>
 
-      <ion-button fill="clear">MORE</ion-button>
+      <ion-button fill="clear">MORE INFO</ion-button>
+
     </ion-card>
-
-    <ion-card routerLink="/recipe/2">
-      <img alt="kimchi" src="assets/img/kimchi.jpg" />
-      <ion-card-header>
-        <ion-card-title>Kimchisamida</ion-card-title>
-        <ion-card-subtitle>Korean Food</ion-card-subtitle>
-      </ion-card-header>
-    
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
-      </ion-card-content>
-      <ion-button fill="clear">MORE</ion-button>
-    </ion-card>
-
-    <ion-card routerLink="/recipe/3">
-      <img alt="menudo" src="assets/img/menudo.jpg" />
-      <ion-card-header>
-        <ion-card-title>Menudo</ion-card-title>
-        <ion-card-subtitle>Go to Filipino Fiesta Food</ion-card-subtitle>
-      </ion-card-header>
-    
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
-      </ion-card-content>
-      <ion-button fill="clear">MORE</ion-button>
-    </ion-card>
-
   </div>
+
+
 </ion-content>

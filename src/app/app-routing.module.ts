@@ -17,6 +17,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'employees/:id',
+    loadChildren: () => import('./employees/employees.module').then( m => m.EmployeesPageModule)
+  },
 ];
 
 @NgModule({
